@@ -1,0 +1,21 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__link {
+    font-size: 1.6rem;
+  }
+
+  .column-separator {
+    height: 25px;
+    width: 3px;
+    background: #FFD900;
+    margin: 0 1rem;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 576px) {
+    display: none;
+  }
+}
