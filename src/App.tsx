@@ -3,6 +3,7 @@ import {Header} from "./components/Header/Header.tsx";
 
 import "./App.scss";
 import {MovieSection} from "./components/MovieSection/MovieSection.tsx";
+import {Footer} from "./components/Footer/Footer.tsx";
 
 export const App = ()=> {
     const movies = [
@@ -25,7 +26,8 @@ export const App = ()=> {
       <Header/>
       <Home/>
       <MovieSection title="KUP BILET" movies={movies}/>
-        <MovieSection title="WKRÓTCE" movies={movies}/>
+      <MovieSection title="WKRÓTCE" movies={movies}/>
+      <Footer/>
     </div>
   )
 }

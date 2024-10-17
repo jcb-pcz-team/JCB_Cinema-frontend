@@ -1,0 +1,13 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  background: #FFD900;
+
+  .paragraph {
+    color: #000000;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}

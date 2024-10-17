@@ -40,6 +40,10 @@ html {
   }
 }
 
+body {
+  overflow: overlay;
+}
+
 a {
   text-decoration: none;
   color: white;
@@ -85,18 +89,4 @@ a {
   src: url('../fonts/Poppins-ExtraBold.ttf') format('ttf');
   font-weight: 800; // ExtraBold
   font-style: normal;
-}
-
-::-webkit-scrollbar {
-  width: 1rem;
-}
-
-::-webkit-scrollbar-track {
-  background-color: rgb(255, 255, 255);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgb(0, 0, 0);
-  border: 3px solid rgb(255, 255, 255);
-  border-radius: 25px;
 }

@@ -6,6 +6,7 @@
   top: 0;
   left: 0;
   backdrop-filter: blur(5px);
+  z-index: 1337;
 
   &__wrapper {
     display: flex;

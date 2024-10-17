@@ -1,6 +1,10 @@
 .movie-section {
   padding: 3rem 0 0 0;
   background-color: #000;
+
+  &:nth-of-type(2) {
+    padding: 3rem 0 3rem 0;
+  }
 }
 
 .movie-section .secondary-heading {
