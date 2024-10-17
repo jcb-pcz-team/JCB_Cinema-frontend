@@ -1,0 +1,31 @@
+.movie-poster {
+  flex: 0 0 auto;
+  width: auto;
+  margin: 0 .8rem;
+  transition: transform 0.3s ease;
+}
+
+.movie-poster:hover {
+  transform: scale(1.05);
+}
+
+.movie-poster img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-poster p {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .movie-poster {
+    width: 140px;
+  }
+}
