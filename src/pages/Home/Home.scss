@@ -1,8 +1,126 @@
-.app {
-  background-image: url('src/assets/images/mozaik_films_background_image.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
+@use "../../assets/styles/mixins" as mixins;
+
+.home {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+    .content {
+      max-width: 576px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 1rem;
+
+      .primary-heading {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      .paragraph {
+        font-size: .9rem;
+        font-weight: 300;
+      }
+
+      .registration-input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .email-input {
+          width: 100%;
+          max-width: 35rem;
+          height: 4rem;
+          border-radius: 5px;
+          border: 1px solid #707070;
+          background: rgba(0, 0, 0, 0.72);
+          padding: .8rem 1rem;
+          color: #fff;
+        }
+
+        .submit-button {
+          width: 11rem;
+          height: 4rem;
+          border: none;
+          border-radius: 5px;
+          background: #FFD900;
+          margin: 1rem 0 0 0;
+
+          font-weight: 600;
+          font-size: 1.5rem;
+
+          @include mixins.respond(phone) {
+              margin: 0 0 0 1rem;
+          }
+        }
+
+        @include mixins.respond(phone) {
+          flex-direction: row;
+        }
+      }
+
+      & > * {
+          margin: .8rem 0 ;
+
+        .submit-button {
+          margin-top: .8rem;
+        }
+      }
+
+      @include mixins.respond(phone) {
+        .primary-heading {
+          font-size: 4rem;
+        }
+
+        .paragraph {
+          font-size: 1.2rem;
+        }
+      }
+
+      @include mixins.respond(tablets) {
+        max-width: 768px;
+
+        .primary-heading {
+          font-size: 5.5rem;
+        }
+
+        .paragraph {
+          font-size: 1.4rem;
+        }
+
+        .registration-input {
+          .email-input {
+            max-width: 45rem;
+          }
+        }
+      }
+
+      @include mixins.respond(laptops) {
+        max-width: 900px;
+
+        .primary-heading {
+          font-size: 7rem;
+        }
+
+        .paragraph {
+          font-size: 1.6rem;
+        }
+        .registration-input {
+
+          .email-input {
+            max-width: 55rem;
+            height: 5rem;
+          }
+
+          .submit-button {
+            height: 5rem;
+          }
+        }
+      }
+    }
 }
