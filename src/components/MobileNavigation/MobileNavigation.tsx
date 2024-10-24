@@ -1,11 +1,20 @@
 import React from "react";
 import "./MobileNavigation.scss";
+import {Link} from "react-router-dom";
 
 export const MobileNavigation: React.FC = () =>{
     return (
         <nav className="navigation-mobile">
-            <a href="#" className="navigation-mobile__link">LOGOWANIE</a>
-            <a href="#" className="navigation-mobile__link">REJESTRACJA</a>
+            <Link to={`login`} className="navigation-mobile__link">
+                <p className="paragraph">
+                    LOGOWANIE
+                </p>
+            </Link>
+            <a href="#" className="navigation-mobile__link">
+                <p className="paragraph">
+                    REJESTRACJA
+                </p>
+            </a>
         </nav>
     );
 }

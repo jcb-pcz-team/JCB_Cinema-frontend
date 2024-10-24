@@ -6,6 +6,7 @@ import "./Header.scss";
 
 import {MobileNavigation} from "../MobileNavigation/MobileNavigation.tsx";
 import {Navigation} from "../Navigation/Navigation.tsx";
+import {Link} from "react-router-dom";
 
 export const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,9 @@ export const Header: React.FC = () => {
     return(
         <header className="header">
             <div className="header__wrapper">
-                <img src={logoImage} alt="JCB CINEMA" className="logo"/>
+                <Link to={`/`}>
+                    <img src={logoImage} alt="JCB CINEMA" className="logo"/>
+                </Link>
                 <Navigation/>
                 <button onClick={toggleMenu} className="menu-toggler">
                     {isMenuOpen ? (

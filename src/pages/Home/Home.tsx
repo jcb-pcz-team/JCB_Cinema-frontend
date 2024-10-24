@@ -1,5 +1,5 @@
 import './Home.scss';
-import {useState} from "react";
+import React, {useState} from "react";
 
 export const Home = () => {
     const [email, setEmail] = useState('');
@@ -16,7 +16,7 @@ export const Home = () => {
                 <form onSubmit={handleSubmit} className="registration-input">
                     <input
                         type="text"
-                        placeholder="Email lub login"
+                        placeholder="Wpisz swój email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="email-input"

@@ -13,7 +13,10 @@
 
   &__link {
     margin: 3rem 0;
-    font-size: 3rem;
+
+    .paragraph {
+      font-size: 3rem;
+    }
   }
 
   @media (min-width: 576px) {
