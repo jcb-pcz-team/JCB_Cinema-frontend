@@ -3,11 +3,48 @@
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  border-radius: 1rem;
+
+  .error-message {
+    color: #ff4d4f;
+    font-size: 1.4rem;
+    margin-top: 0.25rem;
+  }
 
   div {
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
+
+    input {
+      width: 100%;
+      max-width: 35rem;
+      height: 5rem;
+      border-radius: 5px;
+      border: 1px solid #707070;
+      background: rgba(0, 0, 0, 0.72);
+      padding: .8rem 1rem;
+      color: #fff;
+      margin: .6rem 0;
+
+      &:focus {
+        border-color: #40a9ff;
+        outline: none;
+      }
+    }
+  }
+
+  .submit-button {
+    max-height: 4rem;
+    border: none;
+    border-radius: 5px;
+    background: #FFD900;
+    margin: 2rem 0 0 0;
+
+    font-weight: 600;
+    font-size: 1.5rem;
   }
 }

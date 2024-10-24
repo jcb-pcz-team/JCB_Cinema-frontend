@@ -1,0 +1,25 @@
+.registration-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+
+  background-image: url('src/assets/images/mozaik_films_background_image.png');
+
+  &__wrapper {
+    .registraton-container {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+    }
+  }
+
+  .navigation {
+    display: none;
+  }
+  .menu-toggler {
+    display: none;
+  }
+}

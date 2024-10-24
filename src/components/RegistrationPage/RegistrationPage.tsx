@@ -1,17 +1,15 @@
-import {Link} from "react-router-dom";
-import logo from "../../assets/images/logo.png";
 import {RegistrationForm} from "../RegistrationForm/ReagistrationForm.tsx";
+import "./RegistrationPage.scss";
+import {Header} from "../Header/Header.tsx";
 
 export const RegistrationPage = () => {
     return (
         <div className="registration-page">
+            <Header/>
             <div className="registration-page__wrapper">
-                <div className="logo-container">
-                    <Link to={'/'}>
-                        <img src={logo} alt="logo"/>
-                    </Link>
+                <div className="registraton-container">
+                    <RegistrationForm/>
                 </div>
-                <RegistrationForm/>
             </div>
         </div>
     );

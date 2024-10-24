@@ -6,7 +6,20 @@
   align-content: center;
   justify-content: center;
 
-  &__wrapper {
+  background-image: url('src/assets/images/mozaik_films_background_image.png');
 
+  &__wrapper {
+    .form-container {
+      display: flex;
+      align-self: center;
+      justify-content: center;
+    }
+  }
+
+  .navigation {
+    display: none;
+  }
+  .menu-toggler {
+    display: none;
   }
 }

@@ -31,46 +31,53 @@ export const RegistrationForm: React.FC = () => {
 
     return (
         <form onSubmit={formik.handleSubmit} className="form">
+            <h2 className="secondary-heading">Zarejestruj się</h2>
+
             <div>
                 <label htmlFor="name">Imię</label>
                 <input
                     id="name"
                     name="name"
                     type="text"
+                    placeholder="Imię"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.name}
                 />
                 {formik.touched.name && formik.errors.name ? (
-                    <div>{formik.errors.name}</div>
+                    <div className="error-message">{formik.errors.name}</div>
                 ) : null}
             </div>
+
             <div>
                 <label htmlFor="surname">Nazwisko</label>
                 <input
                     id="surname"
                     name="surname"
                     type="text"
+                    placeholder="Nazwisko"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.surname}
                 />
                 {formik.touched.surname && formik.errors.surname ? (
-                    <div>{formik.errors.surname}</div>
+                    <div className="error-message">{formik.errors.surname}</div>
                 ) : null}
             </div>
+
             <div>
                 <label htmlFor="email">Email</label>
                 <input
                     id="email"
                     name="email"
                     type="email"
+                    placeholder="Email"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
                 />
                 {formik.touched.email && formik.errors.email ? (
-                    <div>{formik.errors.email}</div>
+                    <div className="error-message">{formik.errors.email}</div>
                 ) : null}
             </div>
 
@@ -80,15 +87,18 @@ export const RegistrationForm: React.FC = () => {
                     id="password"
                     name="password"
                     type="password"
+                    placeholder="Hasło"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.password}
                 />
                 {formik.touched.password && formik.errors.password ? (
-                    <div>{formik.errors.password}</div>
+                    <div className="error-message">{formik.errors.password}</div>
                 ) : null}
             </div>
-            <button type="submit">ZAREJESTRUJ SIĘ</button>
+
+            <button className="submit-button" type="submit">ZAREJESTRUJ SIĘ</button>
         </form>
+
     );
 };

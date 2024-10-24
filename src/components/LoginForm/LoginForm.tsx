@@ -25,18 +25,20 @@ export const LoginForm: React.FC = () => {
 
     return (
         <form onSubmit={formik.handleSubmit} className="form">
+            <h2 className="secondary-heading">Zaloguj się</h2>
             <div>
                 <label htmlFor="email">Email</label>
                 <input
                     id="email"
                     name="email"
                     type="email"
+                    placeholder="Email"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.email}
                 />
                 {formik.touched.email && formik.errors.email ? (
-                    <div>{formik.errors.email}</div>
+                    <div  className="error-message">{formik.errors.email}</div>
                 ) : null}
             </div>
 
@@ -46,16 +48,17 @@ export const LoginForm: React.FC = () => {
                     id="password"
                     name="password"
                     type="password"
+                    placeholder="Hasło"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.password}
                 />
                 {formik.touched.password && formik.errors.password ? (
-                    <div>{formik.errors.password}</div>
+                    <div className="error-message">{formik.errors.password}</div>
                 ) : null}
             </div>
 
-            <button type="submit">ZALOGUJ</button>
+            <button type="submit" className="submit-button">ZALOGUJ</button>
         </form>
     );
 };
